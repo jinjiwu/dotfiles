@@ -29,8 +29,9 @@
     autoStash = true
 
 [credential]
-    helper = manager
-    credentialStore = secretservice
+    helper = store
+    # helper = manager
+    # credentialStore = secretservice
 
 [alias]
     st = status -sb
