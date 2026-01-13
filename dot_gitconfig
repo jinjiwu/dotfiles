@@ -1,44 +1,45 @@
 [user]
-	name = jinjiwu
-	email = jinji_wu@qq.com
+    name = jinjiwu
+    email = jinji_wu@qq.com
 
 [core]
-	editor = code --wait
+    # pager = code --wait --reuse-window -
+    editor = code --wait
     # 在`.gitattributes`中配置`* text=auto EOL=lf`
-	autocrlf = false
+    autocrlf = false
 
 [diff]
-	tool = vscode
+    tool = vscode
 [difftool "vscode"]
-	cmd = code --wait --diff "$LOCAL" "$REMOTE"
+    cmd = code --wait --diff "$LOCAL" "$REMOTE"
 
 [merge]
-	tool = vscode
-	conflictstyle = zdiff3
+    tool = vscode
+    conflictstyle = zdiff3
 [mergetool "vscode"]
-	cmd = code --wait "$MERGED"
+    cmd = code --wait "$MERGED"
 
 [fetch]
-	prune = true
+    prune = true
 
 [pull]
-	rebase = true
-	ff = only
+    rebase = true
+    ff = only
 [rebase]
-	autoStash = true
+    autoStash = true
 
 [credential]
-	helper = manager-core
+    helper = manager-core
 
 [alias]
-	st = status -sb
-	co = checkout
-	br = branch
-	ci = commit
-	cm = commit -m
-	amend = commit --amend --no-edit
-	p = push
-	pl = pull
-	f = fetch
-	lg = log --graph --decorate --oneline --abbrev-commit
-	a = add -A
+    st = status -sb
+    co = checkout
+    br = branch
+    ci = commit
+    cm = commit -m
+    amend = commit --amend --no-edit
+    p = push
+    pl = pull
+    f = fetch
+    lg = log --graph --decorate --oneline --abbrev-commit
+    a = add -A
