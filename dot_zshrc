@@ -1,0 +1,12 @@
+# starship
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
+eval "$(fzf --zsh)"
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+autoload -Uz compinit
+compinit
+
+# alias
