@@ -30,6 +30,7 @@
 
 [credential]
     helper = manager
+    credentialStore = secretservice
 
 [alias]
     st = status -sb
