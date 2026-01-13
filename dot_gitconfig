@@ -29,7 +29,7 @@
     autoStash = true
 
 [credential]
-    helper = manager-core
+    helper = manager
 
 [alias]
     st = status -sb
