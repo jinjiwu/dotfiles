@@ -3,6 +3,7 @@
 xontrib load free_cwd
 xontrib load coreutils
 xontrib load prompt_starship
+xontrib load fzf-widgets
 
 # alias
 # 添加 --icons 显示图标，--git 显示 git 状态，--header 显示表头
