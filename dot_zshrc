@@ -1,48 +1,47 @@
+# [plugins]
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 autoload -Uz compinit
 compinit
 
+# [init]
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 eval "$(fzf --zsh)"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
+# [environment]
 export PATH=$PATH:~/.local/bin
 
-# alias
+# [alias]
+alias ls='eza --icons --git'
+alias ll='eza -l --icons --git --time-style relative'
 
-# function
+# [functions]
+# [functions.yazi]
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    command yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
+}
+
+# [functions.pproxy] use clash proxy for a command
 pproxy() {
-    local proxy_url
-    # 在这里定义你的默认代理地址
-    local default_proxy_url="http://127.0.0.1:7890"
+  local default="http://127.0.0.1:7890"
+  local proxy
 
-    # 1. 检查第一个参数是否是代理地址
-    case "$1" in
-        http://*|https://*)
-            proxy_url="$1"
-            shift # 移除代理地址参数，剩下的是要执行的命令
-            ;;
-        *)
-            # 2. 如果不是，则尝试从环境变量获取，如果环境变量也为空，则使用默认值
-            #    语法 ${VAR:-default} 表示：如果 $VAR 存在且不为空，则使用 $VAR 的值，否则使用 default 的值。
-            proxy_url="${INTERNAL_PROXY_URL:-$default_proxy_url}"
-            ;;
-    esac
+  case "$1" in
+    http://*|https://*)
+      proxy="$1"; shift ;;
+    *)
+      proxy="${INTERNAL_PROXY_URL:-$default}" ;;
+  esac
 
-    # 3. 检查是否还有要执行的命令
-    if [ $# -eq 0 ]; then
-        echo "错误：没有提供要执行的命令。" >&2
-        echo "用法: pproxy [代理地址] <命令>" >&2
-        return 1
-    fi
+  [ $# -gt 0 ] || { echo "用法: pproxy [http(s)://proxy] <命令> [参数...]" >&2; return 1; }
 
-    # 4. 使用代理执行命令
-    echo "==> 使用代理 [${proxy_url}] 执行: $@"
-    env \
-      http_proxy="$proxy_url" \
-      https_proxy="$proxy_url" \
-      "$@"
+  echo "==> proxy=$proxy cmd=$*"
+  env http_proxy="$proxy" https_proxy="$proxy" all_proxy="$proxy" "$@"
 }
