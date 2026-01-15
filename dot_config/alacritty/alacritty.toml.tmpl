@@ -1,0 +1,39 @@
+[terminal.shell]
+{{- if eq .chezmoi.os "windows" }}
+# Windows 下的配置 (使用 PowerShell Core)
+program = "pwsh.exe"
+args = ["-NoLogo"]
+{{- else }}
+program = "/usr/bin/zsh"
+args = ["--login"]
+{{- end }}
+
+[font]
+size = 14.0
+
+[font.normal]
+# family = "Monaspace Neon NF" # 注意：Scoop 安装的 Nerd Font 版本通常会在名字里带 "NF"
+family = "MonaspiceNe Nerd Font" 
+# family = "JetBrainsMono Nerd Font" 
+# style = "Regular"
+
+[window]
+decorations = "full"
+# padding = { x = 12, y = 12 }
+opacity = 0.9
+dimensions = { columns = 120, lines = 35 }
+
+[scrolling]
+history = 10000
+
+[selection]
+save_to_clipboard = true
+
+[bell]
+duration = 0
+
+[keyboard]
+bindings = [
+  { key = "V", mods = "Control", action = "Paste" },
+  { key = "Enter", mods = "Shift", chars = "\n" },
+]
