@@ -14,6 +14,7 @@ Import-Module -Name Microsoft.WinGet.CommandNotFound
 # [functions.eza]
 function ls { eza --icons --git $args }
 function ll { eza -l --icons --git --time-style relative $args }
+function lt { eza --tree --level=2 --icons $args }
 # [functions.yazi] `q` quit to current directory, `Q` quit to start directory
 function y {
     $tmp = (New-TemporaryFile).FullName

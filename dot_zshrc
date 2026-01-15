@@ -17,6 +17,7 @@ export PATH=$PATH:~/.local/bin
 # [alias]
 alias ls='eza --icons --git'
 alias ll='eza -l --icons --git --time-style relative'
+alias lt='eza --tree --level=2 --icons'
 
 # [functions]
 # [functions.yazi]
