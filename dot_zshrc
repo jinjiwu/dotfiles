@@ -1,3 +1,11 @@
+# [general]
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt APPEND_HISTORY        # 追加写入，而不是覆盖
+# setopt INC_APPEND_HISTORY    # 每执行一条命令就立刻写入磁盘
+setopt SHARE_HISTORY         # 多个终端会话共享历史
+
 # [plugins]
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
