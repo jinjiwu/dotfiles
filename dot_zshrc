@@ -7,10 +7,14 @@ setopt APPEND_HISTORY        # 追加写入，而不是覆盖
 setopt SHARE_HISTORY         # 多个终端会话共享历史
 
 # [plugins]
+autoload -Uz compinit;compinit
+# [plugins.fzf-tab]
+# git clone https://github.com/Aloxaf/fzf-tab ~/.zsh-plugins/fzf-tab
+# source ~/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh
+# [plugins.zsh-autosuggestions & zsh-syntax-highlighting]
+# sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-autoload -Uz compinit
-compinit
 
 # [init]
 eval "$(starship init zsh)"
