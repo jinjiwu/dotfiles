@@ -1,0 +1,22 @@
+[mgr]
+linemode = "size"      # size / mtime / none
+show_hidden = true
+show_symlink = true
+scrolloff = 3
+
+[preview]
+tab_size = 2
+warp = true
+
+# [opener]
+# open = [
+#   { run = 'xdg-open "$1"', desc = "Default app", for = "linux" },
+
+#   # Windows: 系统默认应用
+#   { run = 'cmd /c start "" "%~1"', desc = "Default app", for = "windows" },
+# ]
+
+# [open]
+# rules = [
+#   { name = "*", use = "open" },
+# ]
