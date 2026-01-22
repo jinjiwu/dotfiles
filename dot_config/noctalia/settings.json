@@ -165,6 +165,10 @@
                 },
                 {
                     "displayMode": "onhover",
+                    "id": "Bluetooth"
+                },
+                {
+                    "displayMode": "onhover",
                     "id": "Brightness"
                 },
                 {
