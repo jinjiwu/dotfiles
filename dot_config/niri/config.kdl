@@ -106,6 +106,21 @@ input {
     position x=1280 y=0
 }
 
+output "HDMI-A-2" {
+    // off
+    mode "1920x1080@60.000"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+}
+output "DP-1" {
+    // off
+    mode "2560x1440@144.000"
+    scale 1
+    transform "normal"
+    position x=1920 y=0
+}
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
@@ -269,7 +284,10 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
+// [startup.noctalia]
 spawn-at-startup "qs" "-c" "noctalia-shell"
+// [startup.polkit-kde-agent]
+spawn-at-startup "polkit-kde-authentication-agent-1" 
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
