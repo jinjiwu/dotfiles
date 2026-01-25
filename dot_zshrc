@@ -25,7 +25,8 @@ eval "$(uvx --generate-shell-completion zsh)"
 
 # [environment]
 export PATH=$PATH:~/.local/bin
-export EDITOR=helix
+# export EDITOR=helix
+export EDITOR='code --wait'
 
 # [alias]
 alias hx='helix'
