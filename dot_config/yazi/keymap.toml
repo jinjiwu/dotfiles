@@ -11,3 +11,9 @@ on   = "!"
 for  = "windows"
 run  = 'shell "pwsh.exe" --block'
 desc = "Open pwsh here"
+
+# [keymap.input]
+[[input.prepend_keymap]]
+on   = "<Esc>"
+run  = "close"
+desc = "Cancel input"
