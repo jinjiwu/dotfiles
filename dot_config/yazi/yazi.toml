@@ -8,15 +8,15 @@ scrolloff = 3
 tab_size = 2
 warp = true
 
-# [opener]
-# open = [
-#   { run = 'xdg-open "$1"', desc = "Default app", for = "linux" },
+# [plugin.mine_ext]
+[[plugin.prepend_fetchers]]
+id   = "mime"
+url  = "local://*"
+run  = "mime-ext.local"
+prio = "high"
 
-#   # Windows: 系统默认应用
-#   { run = 'cmd /c start "" "%~1"', desc = "Default app", for = "windows" },
-# ]
-
-# [open]
-# rules = [
-#   { name = "*", use = "open" },
-# ]
+[[plugin.prepend_fetchers]]
+id   = "mime"
+url  = "remote://*"
+run  = "mime-ext.remote"
+prio = "high"
