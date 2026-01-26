@@ -296,7 +296,7 @@ layout {
 spawn-at-startup "qs" "-c" "noctalia-shell"
 // [startup.polkit-kde-agent]
 spawn-at-startup "polkit-kde-authentication-agent-1" 
-
+spawn-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
