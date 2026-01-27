@@ -21,3 +21,16 @@ Status:children_add(function()
     }
 end, 500, Status.RIGHT)
 
+-- [mine-ext]
+require("mime-ext.local"):setup {
+    with_files = {
+        makefile = "text/makefile",
+        [".bashrc"] = "text/plain",
+    },
+
+    with_exts = {
+        mk = "text/makefile",
+        [""] = "text/plain",
+    },
+    fallback_file1 = false,
+}
