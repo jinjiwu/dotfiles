@@ -1,6 +1,6 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:mime-ext"
-rev = "6c71385"
+rev = "e07bf41"
 hash = "7b7dc677b58371da6fc63e4fcd134651"
 
 [[flavor.deps]]

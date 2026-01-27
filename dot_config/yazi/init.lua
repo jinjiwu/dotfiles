@@ -30,6 +30,8 @@ require("mime-ext.local"):setup {
 
     with_exts = {
         mk = "text/makefile",
+        kdl = "text/kdl",
+        drawio = "application/vnd.jgraph.drawio",
         [""] = "text/plain",
     },
     fallback_file1 = false,

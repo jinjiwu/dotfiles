@@ -6,7 +6,7 @@ scrolloff = 3
 
 [preview]
 tab_size = 2
-warp = true
+wrap = "yes"
 
 # [plugin.mine_ext]
 [[plugin.prepend_fetchers]]
