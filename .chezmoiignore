@@ -1,0 +1,4 @@
+**/.git
+**/cache
+.config/mpv/.git*
+.config/mpv/LICENSE
