@@ -358,6 +358,8 @@ window-rule {
 window-rule {
     match app-id="code"
     match app-id="google-chrome"
+    match app-id="zotero"
+    match app-id="obsidian"
     open-maximized true
     // default-column-width { proportion 0.6; }
 }
