@@ -1,3 +1,34 @@
+#[general]
 theme = Catppuccin Mocha
-font-family = "Monaspace Neon NF"
+
+#[font]
 font-size = 16
+font-family = "Monaspace Neon NF"
+
+#[selection]
+copy-on-select = clipboard
+
+#[keybind]
+keybind = ctrl+v=paste_from_clipboard
+
+#[keybind.tab]
+keybind = alt+n=new_tab
+keybind = alt+[=previous_tab
+keybind = alt+]=next_tab
+keybind = alt+shift+[=move_tab:-1
+keybind = alt+shift+]=move_tab:1
+
+# #[keybind.window]
+keybind = alt+==new_split:down
+keybind = alt+-=close_surface
+
+#[keybind.size]
+keybind = ctrl+=increase_font_size:2
+keybind = ctrl+minus=decrease_font_size:2
+keybind = ctrl+0=reset_font_size
+
+#[keybind.pane]
+keybind = alt+left=goto_split:left
+keybind = alt+right=goto_split:right
+keybind = alt+up=goto_split:up
+keybind = alt+down=goto_split:down
