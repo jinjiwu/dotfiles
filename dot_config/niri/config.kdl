@@ -297,7 +297,7 @@ spawn-at-startup "qs" "-c" "noctalia-shell"
 // [startup.polkit-kde-agent]
 spawn-at-startup "polkit-kde-authentication-agent-1" 
 spawn-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
-spawn-at-startup "~/.config/niri/scripts/idle.sh"
+// spawn-at-startup "~/.config/niri/scripts/idle.sh"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
@@ -353,6 +353,15 @@ window-rule {
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
+}
+
+window-rule {
+    match app-id="code"
+    match app-id="google-chrome"
+    match app-id="zotero"
+    match app-id="obsidian"
+    open-maximized true
+    // default-column-width { proportion 0.6; }
 }
 
 // Example: block out two password managers from screen capture.
@@ -627,7 +636,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    Mod+Shift+S { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
@@ -657,6 +666,8 @@ binds {
     Mod+T { spawn "kitty"; }
     Mod+B { spawn "google-chrome-stable"; }
     Mod+E { spawn "nautilus"; }
+    Mod+N { spawn "/home/jinjiwu/Codes/ai-trans/.venv/bin/ai-trans" "translate"; }
+    Mod+Space { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:assistant-panel" "open"; }
     // Audio controls
     // XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
     // XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
