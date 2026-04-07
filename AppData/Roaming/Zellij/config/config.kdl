@@ -3,6 +3,7 @@ default_layout "compact"
 on_force_close "detach"
 scroll_buffer_size 50000
 theme "catppuccin-macchiato"
+support_kitty_keyboard_protocol false
 
 // default keybinds, can be overridden by plugins or user configuration
 keybinds clear-defaults=true {
@@ -259,6 +260,7 @@ keybinds clear-defaults=true {
         bind "x" { CloseFocus; SwitchToMode "normal"; }
         bind "{" { MoveTab "Left"; SwitchToMode "Normal"; }
         bind "}" { MoveTab "Right"; SwitchToMode "Normal"; }
+        bind "w" { LaunchOrFocusPlugin "session-manager"; SwitchToMode "Normal"; }
     }
 }
 
