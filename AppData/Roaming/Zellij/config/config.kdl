@@ -258,8 +258,8 @@ keybinds clear-defaults=true {
         bind "z" { ToggleFocusFullscreen; SwitchToMode "normal"; }
         // [tmux.personal]
         bind "x" { CloseFocus; SwitchToMode "normal"; }
-        bind "{" { MoveTab "Left"; SwitchToMode "Normal"; }
-        bind "}" { MoveTab "Right"; SwitchToMode "Normal"; }
+        bind "Shift h" { MoveTab "Left"; SwitchToMode "Normal"; }
+        bind "Shift l" { MoveTab "Right"; SwitchToMode "Normal"; }
         bind "w" { LaunchOrFocusPlugin "session-manager"; SwitchToMode "Normal"; }
     }
 }

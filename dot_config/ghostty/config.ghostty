@@ -12,15 +12,15 @@ copy-on-select = clipboard
 keybind = ctrl+v=paste_from_clipboard
 
 #[keybind.tab]
-keybind = alt+n=new_tab
-keybind = alt+[=previous_tab
-keybind = alt+]=next_tab
-keybind = alt+shift+[=move_tab:-1
-keybind = alt+shift+]=move_tab:1
+keybind = alt+c=new_tab
+keybind = alt+x=close_surface
+keybind = alt+p=previous_tab
+keybind = alt+n=next_tab
+keybind = alt+shift+h=move_tab:-1
+keybind = alt+shift+l=move_tab:1
 
 # #[keybind.window]
-keybind = alt+==new_split:down
-keybind = alt+-=close_surface
+keybind = alt+"=new_split:down
 
 #[keybind.size]
 keybind = ctrl+=increase_font_size:2

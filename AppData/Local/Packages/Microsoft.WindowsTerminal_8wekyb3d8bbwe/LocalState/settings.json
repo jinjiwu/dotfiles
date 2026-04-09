@@ -22,11 +22,11 @@
         },
         {
             "id": "Terminal.ClosePane",
-            "keys": "alt+minus"
+            "keys": "alt+x"
         },
         {
             "id": "Terminal.OpenNewTab",
-            "keys": "alt+n"
+            "keys": "alt+c"
         },
         {
             "id": "Terminal.DuplicatePaneAuto",
@@ -34,23 +34,23 @@
         },
         {
             "id": "Terminal.PrevTab",
-            "keys": "alt+["
+            "keys": "alt+p"
         },
         {
             "id": "Terminal.MoveTabBackward",
-            "keys": "alt+shift+["
+            "keys": "alt+shift+l"
         },
         {
             "id": "Terminal.NextTab",
-            "keys": "alt+]"
+            "keys": "alt+n"
         },
         {
             "id": "Terminal.MoveTabForward",
-            "keys": "alt+shift+]"
+            "keys": "alt+shift+h"
         },
         {
             "id": "Terminal.SplitPaneRight",
-            "keys": "alt+plus"
+            "keys": "alt+\""
         },
         {
             "id": "Terminal.MoveFocusUp",

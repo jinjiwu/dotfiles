@@ -1,17 +1,3 @@
-[general]
-# .chezmoi.homeDir 代表当前系统的用户主目录
-working_directory = "{{ .chezmoi.homeDir | replace "\\" "/" }}"
-
-[terminal.shell]
-{{- if eq .chezmoi.os "windows" }}
-# Windows 下的配置 (使用 PowerShell Core)
-program = "pwsh.exe"
-args = ["-NoLogo"]
-{{- else }}
-program = "/usr/bin/zsh"
-args = ["--login"]
-{{- end }}
-
 [font]
 size = 14.0
 
