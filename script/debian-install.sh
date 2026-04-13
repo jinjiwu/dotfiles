@@ -3,8 +3,6 @@ apt update && apt install -y --no-install-recommends \
     git \
     wget \
     tmux \
-    fzf \
-    zoxide \
     rsync \
     chezmoi \
     zsh \
@@ -23,16 +21,24 @@ chezmoi init https://github.com/jinjiwu/dotfiles.git
 
 curl -sS https://starship.rs/install.sh | sh -s -- --yes 
 
+# [zoxide]
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh 
+# [fzf]
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+# [fzf.config]
+# Set up fzf key bindings and fuzzy completion
+# source <(fzf --zsh)
+# [skim] fzf substitute rust. Always check the content of the script before running it !
+# curl --proto '=https' --tlsv1.2 -LsSf https://github.com/skim-rs/skim/releases/latest/download/skim-installer.sh | sh
+# source <(sk --shell zsh)
 
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # [zellij.ubuntu>23.04]
 # apt install -y zellij
 # [zellij.old_system]
-wget https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
-# 解压
-tar -xvf zellij-x86_64-unknown-linux-musl.tar.gz
-# 赋予执行权限并移动到系统路径
-chmod +x zellij
-mv zellij .local/bin/
+# wget https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
+# tar -xvf zellij-x86_64-unknown-linux-musl.tar.gz
+# chmod +x zellij
+# mv zellij .local/bin/
