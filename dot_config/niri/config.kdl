@@ -660,14 +660,14 @@ binds {
     
     // [keybinds.noctalia]
     // Core Noctalia binds
-    Mod+A { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    Mod+Space { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Mod+D { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
     Mod+S { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-    Mod+T { spawn "kitty"; }
+    Mod+T { spawn "ghostty"; }
     Mod+B { spawn "google-chrome-stable"; }
     Mod+E { spawn "nautilus"; }
     Mod+N { spawn "/home/jinjiwu/Codes/ai-trans/.venv/bin/ai-trans" "translate"; }
-    Mod+Space { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:assistant-panel" "open"; }
+    // Mod+Space { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:assistant-panel" "open"; }
     // Audio controls
     // XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
     // XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
