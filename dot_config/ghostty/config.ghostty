@@ -1,4 +1,5 @@
 #[general]
+shell-integration-features = sudo,ssh-terminfo,ssh-env
 theme = Catppuccin Mocha
 
 #[font]
