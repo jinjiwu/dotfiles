@@ -11,11 +11,11 @@ autoload -Uz compinit;compinit
 # [plugins.fzf-tab]
 # git clone https://github.com/Aloxaf/fzf-tab ~/.zsh-plugins/fzf-tab
 # source ~/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh
-# [plugins.zsh-autosuggestions & zsh-syntax-highlighting]
-# sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
+
+# [arch.plugins.zsh-autosuggestions & zsh-syntax-highlighting]
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# [zsh.plugins.zsh-autosuggestions & zsh-syntax-highlighting for ubuntu]
+# [ubuntu.plugins.zsh-autosuggestions & zsh-syntax-highlighting]
 # source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 
 # source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
