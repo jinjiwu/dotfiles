@@ -2,7 +2,10 @@
 default_layout "compact"
 on_force_close "detach"
 scroll_buffer_size 50000
-theme "catppuccin-macchiato"
+show_startup_tips false
+show_release_notes false
+// theme "catppuccin-macchiato"
+theme "catppuccin-latte"
 support_kitty_keyboard_protocol false
 
 // default keybinds, can be overridden by plugins or user configuration
@@ -269,7 +272,7 @@ keybinds clear-defaults=true {
 plugins {
     about location="zellij:about"
     compact-bar location="zellij:compact-bar" {
-        tooltip "F1"
+        tooltip "Alt h"
     }
     configuration location="zellij:configuration"
     filepicker location="zellij:strider" {
