@@ -1,47 +1,52 @@
 [user]
-    name = jinjiwu
-    email = jinji_wu@qq.com
+	name = jinjiwu
+	email = jinji_wu@qq.com
+
+# [http]
+	# proxy = http://127.0.0.1:2334
+[http "https://github.com"]
+	proxy = 127.0.0.1:7890
+[credential "https://huggingface.co"]
+	provider = generic
 
 [core]
-    # pager = code --wait --reuse-window -
-    editor = code --wait
-    # 在`.gitattributes`中配置`* text=auto EOL=lf`
-    autocrlf = false
-
+	editor = code --wait
+	autocrlf = input
+	safecrlf = warn
+	quotepath = false
 [diff]
-    tool = vscode
-[difftool "vscode"]
-    cmd = code --wait --diff "$LOCAL" "$REMOTE"
-
+	algorithm = histogram
+	colorMoved = default
 [merge]
-    tool = vscode
-    conflictstyle = zdiff3
-[mergetool "vscode"]
-    cmd = code --wait "$MERGED"
+	conflictstyle = zdiff3
 
-[fetch]
-    prune = true
 
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
 [pull]
-    rebase = true
-    ff = only
+	rebase = true
+[push]
+	default = current
+	autoSetupRemote = true
+	followTags = true
 [rebase]
-    autoStash = true
+	autoStash = true
+	autoSquash = true
+	updateRefs = true
 
-[credential]
-    helper = store
-    # helper = manager
-    # credentialStore = secretservice
+[commit]
+	verbose = true
 
 [alias]
-    st = status -sb
-    co = checkout
-    br = branch
-    ci = commit
-    cm = commit -m
-    amend = commit --amend --no-edit
-    p = push
-    pl = pull
-    f = fetch
-    lg = log --graph --decorate --oneline --abbrev-commit
-    a = add -A
+	st = status -sb
+	sw = switch
+	br = branch
+	ci = commit
+	cm = commit -m
+	aa = add .
+	ps = push
+	pl = pull
+	ft = fetch
+	lg = log --oneline --graph --decorate --all
