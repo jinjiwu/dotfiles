@@ -9,8 +9,9 @@ apt update && apt install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # chezmoi, default config location: ~/.local/share/chezmoi
-wget https://github.com/twpayne/chezmoi/releases/download/v2.70.2/chezmoi_2.70.2_linux_amd64.deb
-dpkg -i chezmoi_2.70.2_linux_amd64.deb
+CHEZMOI_VERSION=2.70.2
+wget https://github.com/twpayne/chezmoi/releases/download/v${CHEZMOI_VERSION}/chezmoi_${CHEZMOI_VERSION}_linux_amd64.deb
+dpkg -i chezmoi_${CHEZMOI_VERSION}_linux_amd64.deb
 chezmoi init https://github.com/jinjiwu/dotfiles.git
 chezmoi apply ~/.tmux.conf
 # chezmoi apply ~/.zshrc
@@ -21,11 +22,13 @@ curl -sS https://starship.rs/install.sh | sh -s -- --yes
 # [zoxide]
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh 
 # [fzf]
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+# ~/.fzf/install
+FZF_VERSION=0.72.0
+wget https://github.com/junegunn/fzf/releases/download/v${FZF_VERSION}/fzf-${FZF_VERSION}-linux_amd64.tar.gz -O - | tar xz --no-same-owner && mv fzf ~/.local/bin/
+
 # [eza]
 wget -c https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz -O - | tar xz
-chmod +x eza
 mv eza ~/.local/bin/
 # [uv]
 curl -LsSf https://astral.sh/uv/install.sh | sh

@@ -6,6 +6,12 @@ setopt APPEND_HISTORY        # 追加写入，而不是覆盖
 # setopt INC_APPEND_HISTORY    # 每执行一条命令就立刻写入磁盘
 setopt SHARE_HISTORY         # 多个终端会话共享历史
 
+# [environment] 应该放在开头，否则命令可能找不到
+export PATH=$PATH:~/.local/bin
+# export EDITOR=helix
+export EDITOR='code --wait'
+
+
 # [plugins]
 autoload -Uz compinit;compinit
 # [plugins.fzf-tab]
@@ -13,11 +19,15 @@ autoload -Uz compinit;compinit
 # source ~/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh
 
 # [arch.plugins.zsh-autosuggestions & zsh-syntax-highlighting]
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] &&
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] &&
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # [ubuntu.plugins.zsh-autosuggestions & zsh-syntax-highlighting]
-# source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 
-# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] &&
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] &&
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # [init]
 eval "$(starship init zsh)"
@@ -25,11 +35,6 @@ eval "$(zoxide init zsh --cmd cd)"
 eval "$(fzf --zsh)"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
-
-# [environment]
-export PATH=$PATH:~/.local/bin
-# export EDITOR=helix
-export EDITOR='code --wait'
 
 # [alias]
 alias hx='helix'
