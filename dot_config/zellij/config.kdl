@@ -1,3 +1,5 @@
+// windows config path: env:APPDATA\Local\chezmoi\data\dot_config\zellij\config.kdl
+
 // [general]
 default_layout "compact"
 on_force_close "detach"
@@ -256,14 +258,15 @@ keybinds clear-defaults=true {
         bind "k" { MoveFocus "up"; SwitchToMode "normal"; }
         bind "l" { MoveFocus "right"; SwitchToMode "normal"; }
         bind "n" { GoToNextTab; SwitchToMode "normal"; }
-        bind "o" { FocusNextPane; }
         bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
+        bind "o" { FocusNextPane; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "normal"; }
         // [tmux.personal]
         bind "x" { CloseFocus; SwitchToMode "normal"; }
         bind "{" { MoveTab "Left"; SwitchToMode "Normal"; }
         bind "}" { MoveTab "Right"; SwitchToMode "Normal"; }
         bind "w" { LaunchOrFocusPlugin "session-manager"; SwitchToMode "Normal"; }
+        bind "f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
     }
 }
 
@@ -303,7 +306,7 @@ web_client {
 //   - true
 //   - false (Default)
 // 
-// simplified_ui true
+simplified_ui true
  
 // Enable OSC8 hyperlink output
 // Options:
