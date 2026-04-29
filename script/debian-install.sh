@@ -1,4 +1,8 @@
+# usermod -s /usr/bin/zsh root
+
 # mihomo配置
+# MIHOMO_VERSION=1.19.24
+# wget https://github.com/MetaCubeX/mihomo/releases/download/v${MIHOMO_VERSION}/mihomo-linux-amd64-v3-v${MIHOMO_VERSION}.gz -O mihomo.gz && gunzip mihomo.gz && chmod +x mihomo && mv mihomo ~/.local/bin/mihomo && rm mihomo.gz
 
 apt update && apt install -y --no-install-recommends \
     curl \
