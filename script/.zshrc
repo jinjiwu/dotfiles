@@ -27,6 +27,7 @@ eval "$(uvx --generate-shell-completion zsh)"
 export PATH=$PATH:~/.local/bin
 # export EDITOR=helix
 export EDITOR='code --wait'
+# export HERMES_TUI=1
 
 # [functions.pproxy] use clash proxy for a command
 pproxy() {

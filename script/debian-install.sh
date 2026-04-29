@@ -30,6 +30,26 @@ mv eza ~/.local/bin/
 # [uv]
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+# [hermes]
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+# [codex]
+npm i -g @openai/codex
+# [codex.upgrade]
+# npm i -g @openai/codex@latest 
+# [claude]
+curl -fsSL https://claude.ai/install.sh | bash
+# [onedrive.config]
+rclone copy -P onedrive:.codex ~/.codex/ \
+  --filter "+ {auth.json,config.toml}" \
+  --filter "- *"
+
+rclone copy -P onedrive:.claude ~/.claude/ \
+  --filter "+ {settings.json}" \
+  --filter "- *"
+
+rclone copy -P onedrive:.hermes ~/.hermes/ \
+  --filter "+ {config.yaml,.env}" \
+  --filter "- *"
 
 # [fzf.config]
 # Set up fzf key bindings and fuzzy completion
