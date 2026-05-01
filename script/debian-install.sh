@@ -6,6 +6,7 @@ MIHOMO_VERSION=1.19.24
 wget https://github.com/MetaCubeX/mihomo/releases/download/v${MIHOMO_VERSION}/mihomo-linux-amd64-v3-v${MIHOMO_VERSION}.gz -O mihomo.gz && gunzip mihomo.gz && chmod +x mihomo && mv mihomo ~/.local/bin/ 
 
 apt update && apt install -y --no-install-recommends \
+    unzip \
     curl \
     git \
     wget \
@@ -39,7 +40,7 @@ wget https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-un
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # [rclone]
-curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip && unzip rclone-current-linux-amd64.zip && chmod +x rclone && mv rclone ~/.local/bin/
+wget https://downloads.rclone.org/rclone-current-linux-amd64.zip -O rclone.zip && unzip rclone.zip && mv rclone-* rclone && chmod +x rclone/rclone && mv rclone/rclone ~/.local/bin/
 
 # [hermes]
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
