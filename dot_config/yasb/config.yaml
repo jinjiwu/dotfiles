@@ -44,7 +44,7 @@ widgets:
     type: "yasb.windows_desktops.WorkspaceWidget"
     options:
       label_workspace_btn: " {index} "
-      label_workspace_active_btn: "{index}"
+      label_workspace_active_btn: " {index} "
       callbacks:
         on_left: "activate_workspace"
         on_middle: "do_nothing"
@@ -54,6 +54,32 @@ widgets:
         color: "black"
         radius: 3
         offset: [ 1, 1 ]
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      icon_size: 24
+      tooltip: true
+      show_only_visible: false
+      strict_filtering: true
+      monitor_exclusive: false
+      animation:
+        enabled: true
+        duration: 200
+      preview:
+        enabled: false
+        width: 240
+        delay: 400
+        padding: 8
+        margin: 8
+      title_label:
+        enabled: true
+        show: "focused"
+        min_length: 3
+        max_length: 10
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
   vscode:
     type: "yasb.vscode.VSCodeWidget"
     options:
@@ -346,7 +372,7 @@ widgets:
   traffic:
     type: "yasb.traffic.TrafficWidget"
     options:
-      label: "  {download_speed} |  {upload_speed}"
+      label: " {download_speed}|{upload_speed}"
       label_alt: "Download {download_speed} | Upload {upload_speed}"
       update_interval: 1000
       menu:
@@ -361,32 +387,6 @@ widgets:
         on_middle: "toggle_label"
         on_right: "exec cmd.exe /c start ms-settings:network-status"
 
-  taskbar:
-    type: "yasb.taskbar.TaskbarWidget"
-    options:
-      icon_size: 16
-      tooltip: true
-      show_only_visible: false
-      strict_filtering: true
-      monitor_exclusive: false
-      animation:
-        enabled: true
-        duration: 200
-      preview:
-        enabled: false
-        width: 240
-        delay: 400
-        padding: 8
-        margin: 8
-      title_label:
-        enabled: true
-        show: "focused"
-        min_length: 10
-        max_length: 30
-      ignore_apps:
-        processes: []
-        titles: []
-        classes: []
   systray:
     type: "yasb.systray.SystrayWidget"
     options:
