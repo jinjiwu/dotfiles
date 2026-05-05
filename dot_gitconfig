@@ -53,3 +53,5 @@
 	pl = pull
 	ft = fetch
 	lg = log --oneline --graph --decorate --all
+	sc = clone --filter=blob:none --sparse
+	sps = sparse-checkout set
