@@ -1,57 +1,58 @@
 [user]
-	name = jinjiwu
-	email = jinji_wu@qq.com
+    name = jinjiwu
+    email = jinji_wu@qq.com
 
 # [http]
-	# proxy = http://127.0.0.1:2334
+    # proxy = http://127.0.0.1:2334
 [http "https://github.com"]
-	proxy = 127.0.0.1:7890
+    proxy = 127.0.0.1:7890
 [credential "https://huggingface.co"]
-	provider = generic
+    provider = generic
 
 [credential]
-	helper = store
+    helper = store
 
 [core]
-	editor = code --wait
-	autocrlf = input
-	safecrlf = warn
-	quotepath = false
+    editor = code --wait
+    autocrlf = input
+    safecrlf = warn
+    quotepath = false
 [diff]
-	algorithm = histogram
-	colorMoved = default
+    algorithm = histogram
+    colorMoved = default
 [merge]
-	conflictstyle = zdiff3
+    conflictstyle = zdiff3
 
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [color]
-	ui = auto
+    ui = auto
 [pull]
-	rebase = true
+    rebase = true
 [push]
-	default = current
-	autoSetupRemote = true
-	followTags = true
+    default = current
+    autoSetupRemote = true
+    followTags = true
 [rebase]
-	autoStash = true
-	autoSquash = true
-	updateRefs = true
+    autoStash = true
+    autoSquash = true
+    updateRefs = true
 
 [commit]
-	verbose = true
+    verbose = true
 
 [alias]
-	st = status -sb
-	sw = switch
-	br = branch
-	ci = commit
-	cm = commit -m
-	aa = add .
-	ps = push
-	pl = pull
-	ft = fetch
-	lg = log --oneline --graph --decorate --all
-	sc = clone --filter=blob:none --sparse
-	sps = sparse-checkout set
+    st = status -sb
+    sw = switch
+    br = branch
+    ci = commit
+    cm = commit -m
+    aa = add .
+    ps = push
+    pst = push --tags
+    pl = pull
+    ft = fetch
+    lg = log --oneline --graph --decorate --all
+    sc = clone --filter=blob:none --sparse
+    sps = sparse-checkout set
