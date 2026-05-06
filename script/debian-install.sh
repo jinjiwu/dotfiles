@@ -6,13 +6,21 @@ MIHOMO_VERSION=1.19.24
 wget https://github.com/MetaCubeX/mihomo/releases/download/v${MIHOMO_VERSION}/mihomo-linux-amd64-v3-v${MIHOMO_VERSION}.gz -O mihomo.gz && gunzip mihomo.gz && chmod +x mihomo && mv mihomo ~/.local/bin/ 
 
 apt update && apt install -y --no-install-recommends \
-    unzip \
+    p7zip-full \
     curl \
     git \
     wget \
     tmux \
     rsync \
-    && rm -rf /var/lib/apt/lists/*
+    zsh \
+    zsh-completions \
+    zsh-autosuggestions \
+    zsh-syntax-highlighting 
+
+# mihomo, default config location: /etc/mihomo/config.yaml or ~/.config/mihomo/config.yaml
+version=v1.19.22
+wget https://github.com/MetaCubeX/mihomo/releases/download/{version}/mihomo-linux-amd64-v3-{version}.deb && \
+    dpkg -i mihomo-linux-amd64-v3-{version}.deb
 
 # chezmoi, default config location: ~/.local/share/chezmoi
 CHEZMOI_VERSION=2.70.2
@@ -40,7 +48,7 @@ wget https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-un
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # [rclone]
-wget https://downloads.rclone.org/rclone-current-linux-amd64.zip -O rclone.zip && unzip rclone.zip && mv rclone-* rclone && chmod +x rclone/rclone && mv rclone/rclone ~/.local/bin/
+wget https://downloads.rclone.org/rclone-current-linux-amd64.zip -O rclone.zip && 7z x rclone.zip && mv rclone-* rclone && chmod +x rclone/rclone && mv rclone/rclone ~/.local/bin/
 
 # [hermes]
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
