@@ -49,9 +49,8 @@
     ci = commit
     cm = commit -m
     aa = add .
-    ps = push
-    pst = push --tags
-    pl = pull
+    pst = push --follow-tags
+    plt = pull --tags
     ft = fetch
     lg = log --oneline --graph --decorate --all
     sc = clone --filter=blob:none --sparse
