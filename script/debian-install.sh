@@ -30,6 +30,18 @@ chezmoi init https://github.com/jinjiwu/dotfiles.git && \
   chezmoi apply ~/.zshrc && \
   chezmoi apply ~/.gitconfig
 
+
+# monaspace nerdfont
+# MONASPACE_VERSION=1.400
+# mkdir -p ~/.local/share/fonts/monaspace ~/.tmp
+
+# wget https://github.com/githubnext/monaspace/releases/download/v${MONASPACE_VERSION}/monaspace-nerdfonts-v${MONASPACE_VERSION}.zip \
+#     -O ~/.tmp/monaspace-nerdfonts.zip && \
+#     7z x ~/.tmp/monaspace-nerdfonts.zip -o ~/.tmp/monaspace-nerdfonts -y && \
+#     find ~/.tmp/monaspace-nerdfonts -type f \( -name "*.otf" -o -name "*.ttf" \) \
+#         -exec cp -v {} ~/.local/share/fonts/monaspace/ \; && \
+#     fc-cache -fv
+
 # [starship]
 curl -sS https://starship.rs/install.sh | sh -s -- --yes 
 
