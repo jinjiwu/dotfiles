@@ -1,0 +1,12 @@
+# brew "mihomo"
+brew "tmux"
+brew "uv"
+brew "git"
+
+brew "fd"
+brew "ripgrep"
+brew "fzf"
+brew "yq"
+brew "jq"
+brew "eza"
+brew "bat"
